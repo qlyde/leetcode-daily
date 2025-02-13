@@ -1,7 +1,7 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         # Time: O(n)
-        # Space: O(1) excluding output arr mem
+        # Auxiliary Space: O(1)
         res = [*nums]
         for i in range(len(nums)):
             nums[i] = nums[i] * (nums[i - 1] if i != 0 else 1)
